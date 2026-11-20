@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wisp — Yddrasil</title>
+  <meta name="description" content="Wisp: 메신저 알림에 자동으로 답하는 JavaScript 봇 앱">
+  <meta property="og:title" content="Wisp — 대화방의 도깨비불">
+  <meta property="og:description" content="JavaScript로 만드는 메신저 자동 응답 봇">
+  <meta property="og:image" content="https://morph-house.github.io/assets/og.jpg">
+  <meta name="theme-color" content="#0B1026">
+  <link rel="icon" href="assets/wisp.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="app-page" style="--accent:#4FD1C5">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <header class="nav">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="32" height="32"><span>Yddrasil</span></a>
+    <nav>
+      <a href="wisp.html" aria-current="page">Wisp</a>
+      <a href="flit.html">Flit</a>
+      <a href="irisa.html">Irisa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="app-hero">
+      <img class="app-hero-icon" src="assets/wisp.svg" alt="Wisp 아이콘" width="180" height="180">
+      <div>
+        <p class="fairy-kind">도깨비불 요정 · 메신저 자동 응답</p>
+        <h1>Wisp <span>위스프</span></h1>
+        <p class="lead">메신저 알림을 받아 자동으로 답장하는 봇 앱이에요. JavaScript로 스크립트를 써서
+          명령어 응답, 공지 전달, 시간 재기 같은 동작을 직접 만들 수 있어요.
+          밤길의 도깨비불처럼, 대화방 한쪽에서 조용히 불을 밝힙니다.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/Morph-house/Wisp-releases" target="_blank" rel="noopener">APK 내려받기</a>
+          <a class="btn ghost" href="https://github.com/Morph-house/WispDesktop-Release" target="_blank" rel="noopener">Wisp Desktop (PC)</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>이런 걸 할 수 있어요</h2>
+      <div class="feature-grid">
+        <div class="feature"><h3>JavaScript 봇</h3><p>ES6 문법의 <strong>API2</strong>와, 기존 봇 스크립트를 그대로 옮겨 올 수 있는 <strong>레거시 API</strong>를 모두 지원해요.</p></div>
+        <div class="feature"><h3>폰에서 바로 편집</h3><p>자동 들여쓰기, 괄호 닫기, 찾기·바꾸기를 갖춘 편집기. 태블릿에서는 목록·편집·뷰어 세 칸으로 펼쳐져요.</p></div>
+        <div class="feature"><h3>테스트룸</h3><p>실제 대화방에 보내기 전에, 가상의 메시지로 스크립트 동작을 먼저 시험해요.</p></div>
+        <div class="feature"><h3>로그와 콘솔</h3><p>받은 메시지·보낸 메시지·실행 로그를 거르고 검색해요. 실행 중인 전역 변수도 들여다볼 수 있어요.</p></div>
+        <div class="feature"><h3>시작 순서 관리</h3><p>스크립트끼리 의존하는 순서대로 자동 정렬하고, 재부팅 뒤에도 그 순서대로 미리 컴파일해요.</p></div>
+        <div class="feature"><h3>홈 화면 위젯</h3><p>전체 컴파일, 전체 켜기·끄기, 최근 메시지를 홈 화면에서 바로 다뤄요.</p></div>
+        <div class="feature"><h3>무한루프 방지</h3><p>CPU 시간으로 10초 넘게 도는 스크립트를 멈춰서, 스크립트 하나가 봇 전체를 멈추지 않게 해요.</p></div>
+        <div class="feature"><h3>다섯 가지 테마</h3><p>밤하늘, 새벽, 저녁 노을, 숲, 바다. 별이 흐르는 배경 애니메이션은 끌 수도 있어요.</p></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>스크립트는 이렇게</h2>
+      <div class="showcase">
+        <pre class="code" aria-label="API2 예제 코드"><code><span class="c">// 명령어 "더하기 2 3" 에 답하는 봇</span>
+<span class="k">const</span> bot = BotManager.getCurrentBot();
+
+bot.addListener(<span class="s">"command"</span>, (msg) =&gt; {
+    <span class="k">if</span> (msg.command === <span class="s">"더하기"</span>) {
+        <span class="k">const</span> sum = msg.args.map(Number)
+                            .reduce((a, b) =&gt; a + b, <span class="n">0</span>);
+        msg.reply(<span class="s">"합계는 "</span> + sum + <span class="s">" 이에요"</span>);
+    }
+});</code></pre>
+        <div class="chat" aria-label="테스트룸 대화 예시">
+          <p class="chat-title">테스트룸</p>
+          <p class="bubble me">더하기 2 3</p>
+          <p class="bubble bot">합계는 5 이에요</p>
+          <p class="bubble me">더하기 10 20 30</p>
+          <p class="bubble bot">합계는 60 이에요</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>처음 시작하기</h2>
+      <ol class="steps">
+        <li><strong>권한 허용</strong> 알림 접근, 모든 파일 접근, 배터리 최적화 제외 세 가지를 허용해요.</li>
+        <li><strong>프로젝트 만들기</strong> + 버튼으로 프로젝트를 만들고 API를 골라요. API2를 권장해요.</li>
+        <li><strong>스크립트 쓰기</strong> + 스크립트로 파일을 만들고 코드를 적어 저장해요.</li>
+        <li><strong>컴파일</strong> 오류가 있으면 그 줄로 바로 이동해요.</li>
+        <li><strong>켜고 시험하기</strong> 테스트룸에서 확인한 뒤, 실제 메신저에서 메시지를 보내 봐요.</li>
+      </ol>
+    </section>
+
+    <section class="reveal">
+      <h2>PC에서도, Wisp Desktop</h2>
+      <div class="split">
+        <p>폰에서 쓰기엔 긴 스크립트라면 PC용 <strong>Wisp Desktop</strong>을 써 보세요.
+          코드 편집기, 자동 완성, 콘솔, 디버거를 갖춘 데스크톱 도구로 Wisp 스크립트를 PC에서 쓰고 시험할 수 있어요.</p>
+        <a class="btn ghost" href="https://github.com/Morph-house/WispDesktop-Release" target="_blank" rel="noopener">Wisp Desktop 받기</a>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>알아 두세요</h2>
+      <dl class="specs">
+        <dt>지원 기기</dt><dd>Android 12L (API 32) 이상</dd>
+        <dt>스크립트 엔진</dt><dd>Mozilla Rhino 1.9.1 · JavaScript (레거시 ES5, API2 ES6)</dd>
+        <dt>저장 위치</dt><dd><code>/sdcard/Wisp</code></dd>
+        <dt>개인정보</dt><dd>알림 내용은 기기 안에서만 처리돼요. <a href="privacy.html#wisp">개인정보처리방침</a></dd>
+      </dl>
+      <p class="note">Wisp은 알림을 읽고 알림의 답장 기능으로 회신하는 방식이라, 메신저의 운영정책을 확인하고 써 주세요. 자동화 계정은 메신저에서 제재를 받을 수 있어요.</p>
+    </section>
+
+    <nav class="app-switch reveal" aria-label="다른 요정">
+      <a href="irisa.html"><img src="assets/irisa.svg" alt="" width="48" height="48"><span>← Irisa Bridge</span></a>
+      <a href="flit.html"><span>Flit →</span><img src="assets/flit.svg" alt="" width="48" height="48"></a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.svg" alt="" width="24" height="24">
+    <span>© 2026 Yddrasil Corporation</span>
+    <span class="sep">·</span>
+    <a href="privacy.html">개인정보처리방침</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

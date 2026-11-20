@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flit — Yddrasil</title>
+  <meta name="description" content="Flit: 평소 말투로 적는 할 일과 일정 앱 (제작 중)">
+  <meta property="og:title" content="Flit — 필요한 순간에 톡, 물방울 요정">
+  <meta property="og:description" content="평소 말투로 적으면 알아듣는 할 일·일정 앱">
+  <meta property="og:image" content="https://morph-house.github.io/assets/og.jpg">
+  <meta name="theme-color" content="#0B1026">
+  <link rel="icon" href="assets/flit.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="app-page" style="--accent:#2ED8E6">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <header class="nav">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="32" height="32"><span>Yddrasil</span></a>
+    <nav>
+      <a href="wisp.html">Wisp</a>
+      <a href="flit.html" aria-current="page">Flit</a>
+      <a href="irisa.html">Irisa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="app-hero">
+      <img class="app-hero-icon" src="assets/flit.svg" alt="Flit 아이콘" width="180" height="180">
+      <div>
+        <p class="fairy-kind">물방울 요정 · 할 일과 일정</p>
+        <h1>Flit <span>플릿</span> <em class="badge">제작 중</em></h1>
+        <p class="lead">할 일과 일정을 가볍게 적고 잊지 않게 챙겨 주는 앱이에요.
+          "내일 3시 치과"처럼 평소 말투로 적으면 날짜와 시간을 알아듣고,
+          정해진 시간이나 장소에서 물방울처럼 톡, 알려 줍니다.</p>
+        <div class="cta">
+          <span class="btn ghost disabled" aria-disabled="true">곧 만나요 · 제작 중</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>말하듯 적으면, 알아서 정리돼요</h2>
+      <p class="section-lead">한 줄 입력에서 날짜, 시간, 반복, 제목을 뽑아내요. 인터넷 없이 기기 안에서 바로 처리해요.</p>
+      <div class="parse-list">
+        <div class="parse"><p class="parse-in">내일 3시 치과</p><p class="parse-out"><span>내일</span><span>오후 3:00</span><b>치과</b></p></div>
+        <div class="parse"><p class="parse-in">매주 월요일 9시 반 주간회의</p><p class="parse-out"><span>매주 월요일</span><span>오전 9:30</span><b>주간회의</b></p></div>
+        <div class="parse"><p class="parse-in">12월 24일 저녁 7시 크리스마스 저녁</p><p class="parse-out"><span>12월 24일</span><span>오후 7:00</span><b>크리스마스 저녁</b></p></div>
+        <div class="parse"><p class="parse-in">모레 정오 점심 약속</p><p class="parse-out"><span>모레</span><span>오후 12:00</span><b>점심 약속</b></p></div>
+        <div class="parse"><p class="parse-in">매월 말일 카드값 확인</p><p class="parse-out"><span>매월 말일</span><span>오전 9:00</span><b>카드값 확인</b></p></div>
+      </div>
+      <p class="note">"3시"처럼 오전·오후를 빼면 낮 시간으로 알아들어요 (1~6시는 오후, 7~11시는 오전). 날짜만 적으면 오전 9시로 맞춰요.</p>
+    </section>
+
+    <section class="reveal">
+      <h2>이런 걸 할 수 있어요</h2>
+      <div class="feature-grid">
+        <div class="feature"><h3>시간 알림</h3><p>정한 시간에 알림을 보내고, 기기를 다시 켜도 알림 예약이 그대로 남아요.</p></div>
+        <div class="feature"><h3>장소 알림</h3><p>집이나 회사 같은 장소에 들어가거나 나올 때 알려 줘요. 장소 좌표는 기기 안에만 저장해요.</p></div>
+        <div class="feature"><h3>반복과 하위 할 일</h3><p>매일·매주·매월·매년 반복하고, 큰 일은 작은 단계로 나눠 체크해요.</p></div>
+        <div class="feature"><h3>홈 화면 위젯</h3><p>오늘 할 일, 이번 달 미니 캘린더, 누르면 바로 적는 빠른 메모 위젯.</p></div>
+        <div class="feature"><h3>어디서든 빠르게</h3><p>빠른 설정 타일에서 한 번에 적고, 다른 앱의 공유 메뉴로 보낸 글도 할 일로 받아요.</p></div>
+        <div class="feature"><h3>기기 캘린더 연동</h3><p>쓰던 캘린더의 일정과 함께 보고, Flit의 일정을 캘린더에 넣을 수 있어요.</p></div>
+        <div class="feature"><h3>고정 알림</h3><p>알림창에 오늘 할 일을 띄워 두고, 열지 않아도 확인해요.</p></div>
+        <div class="feature"><h3>로컬 API · 백업</h3><p>같은 기기의 다른 앱이 할 일을 넣을 수 있는 로컬 API, 그리고 파일로 내보내기·불러오기.</p></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>알아 두세요</h2>
+      <dl class="specs">
+        <dt>상태</dt><dd>제작 중 · 출시 전이라 기능이 바뀔 수 있어요</dd>
+        <dt>지원 기기</dt><dd>Android 8.0 (API 26) 이상</dd>
+        <dt>데이터</dt><dd>할 일과 장소는 모두 기기 안에 저장돼요. <a href="privacy.html#flit">개인정보처리방침</a></dd>
+      </dl>
+    </section>
+
+    <nav class="app-switch reveal" aria-label="다른 요정">
+      <a href="wisp.html"><img src="assets/wisp.svg" alt="" width="48" height="48"><span>← Wisp</span></a>
+      <a href="irisa.html"><span>Irisa Bridge →</span><img src="assets/irisa.svg" alt="" width="48" height="48"></a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.svg" alt="" width="24" height="24">
+    <span>© 2026 Yddrasil Corporation</span>
+    <span class="sep">·</span>
+    <a href="privacy.html">개인정보처리방침</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

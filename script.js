@@ -75,4 +75,5 @@
   items.forEach((el) => io.observe(el));
 })();
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();

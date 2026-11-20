@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Irisa Bridge — Yddrasil</title>
+  <meta name="description" content="Irisa Bridge: 휴대폰 폴더와 구글 드라이브 폴더를 잇는 동기화 앱">
+  <meta property="og:title" content="Irisa Bridge — 두 기슭을 잇는 요정">
+  <meta property="og:description" content="휴대폰 폴더와 구글 드라이브 폴더를 이어 주는 동기화 앱">
+  <meta property="og:image" content="https://morph-house.github.io/assets/og.jpg">
+  <meta name="theme-color" content="#0B1026">
+  <link rel="icon" href="assets/irisa.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="app-page" style="--accent:#B9A7FF">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <header class="nav">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="32" height="32"><span>Yddrasil</span></a>
+    <nav>
+      <a href="wisp.html">Wisp</a>
+      <a href="flit.html">Flit</a>
+      <a href="irisa.html" aria-current="page">Irisa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="app-hero">
+      <img class="app-hero-icon" src="assets/irisa.svg" alt="Irisa Bridge 아이콘" width="180" height="180">
+      <div>
+        <p class="fairy-kind">다리 위의 요정 · 구글 드라이브 동기화</p>
+        <h1>Irisa Bridge <span>이리사 브릿지</span></h1>
+        <p class="lead">휴대폰 폴더와 구글 드라이브 폴더를 이어 주는 동기화 앱이에요.
+          요정 이리사가 두 기슭 사이에 다리를 놓고 사진, 문서, 영상을 실어 나릅니다.
+          일이 끝나면 다리 위에 내려앉아 쉬어요.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/Morph-house/IrisaBridge-releases" target="_blank" rel="noopener">APK 내려받기</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>두 기슭, 하나의 다리</h2>
+      <div class="bridge-diagram" aria-label="휴대폰 폴더와 드라이브 폴더 사이를 다리가 잇는 그림">
+        <div class="shore"><span class="shore-icon" aria-hidden="true">📱</span><b>휴대폰 폴더</b><small>/DCIM/Camera</small></div>
+        <svg viewBox="0 0 240 90" aria-hidden="true">
+          <path d="M10,70 Q120,0 230,70" fill="none" stroke="#6B4A2F" stroke-width="12" stroke-linecap="round"/>
+          <path d="M10,70 Q120,0 230,70" fill="none" stroke="#B98A55" stroke-width="7" stroke-linecap="round"/>
+          <path d="M0,84 Q30,78 60,84 T120,84 T180,84 T240,84" fill="none" stroke="#7FF5D6" stroke-opacity=".5" stroke-width="2"/>
+          <circle class="mote m1" r="3" fill="#7FF5D6"/>
+          <circle class="mote m2" r="3" fill="#B9A7FF"/>
+        </svg>
+        <div class="shore"><span class="shore-icon" aria-hidden="true">☁️</span><b>구글 드라이브</b><small>/사진 백업</small></div>
+      </div>
+      <p class="section-lead">폰 폴더와 드라이브 폴더 한 쌍을 <strong>다리</strong>라고 불러요. 다리마다 방향을 고를 수 있어요.</p>
+      <div class="direction-list">
+        <div><b>⇄ 양방향</b><span>어느 쪽에서 바꿔도 서로 맞춰요</span></div>
+        <div><b>→ 폰 → 드라이브</b><span>폰의 사진을 드라이브에 백업</span></div>
+        <div><b>← 드라이브 → 폰</b><span>드라이브의 자료를 폰으로 받기</span></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>안심하고 맡길 수 있게</h2>
+      <div class="feature-grid">
+        <div class="feature"><h3>충돌본 보존</h3><p>양쪽에서 같은 파일을 고쳤다면 최신 쪽을 남기고, 밀린 쪽은 충돌본으로 따로 보관해요. 항상 직접 고르게 할 수도 있어요.</p></div>
+        <div class="feature"><h3>최근 3번 되돌리기</h3><p>덮어쓰기 전 내용을 백업해 두고, 최근 세 번의 동기화를 되돌릴 수 있어요.</p></div>
+        <div class="feature"><h3>안전한 전송</h3><p>끊긴 업로드는 이어서 올리고, 다운로드는 크기와 MD5를 확인한 뒤에만 파일을 바꿔요.</p></div>
+        <div class="feature"><h3>휴지통 먼저</h3><p>지운 파일은 바로 사라지지 않고 휴지통으로 가요. 폰 쪽은 30일 보관 뒤 자동으로 정리해요.</p></div>
+        <div class="feature"><h3>백그라운드 동기화</h3><p>다리마다 수동, 15분, 30분, 1시간 주기를 골라요. 앱을 열지 않아도 이리사가 일해요.</p></div>
+        <div class="feature"><h3>정리하기 쉽게</h3><p>다리를 카테고리로 묶고, 정렬·필터·편집 모드로 많은 다리도 깔끔하게 관리해요.</p></div>
+      </div>
+      <p class="note">대상 파일: 사진 (JPG, PNG, HEIC, WebP), 문서 (PDF, DOCX, XLSX, PPTX, TXT, HWP), 영상 (MP4, MOV, MKV 등). 구글 문서·시트·슬라이드 형식은 건너뛰어요.</p>
+    </section>
+
+    <section class="reveal">
+      <h2>네 가지 스킨</h2>
+      <div class="skins">
+        <div class="skin" style="--a:#0B1530;--b:#0E3B4E;--c:#B9A7FF"><span></span><b>달빛 호수</b><small>기본</small></div>
+        <div class="skin" style="--a:#07201C;--b:#14463C;--c:#B8F28A"><span></span><b>새벽 숲</b></div>
+        <div class="skin" style="--a:#2A0F2E;--b:#5C2440;--c:#FFA7C4"><span></span><b>노을 강</b></div>
+        <div class="skin" style="--a:#05060F;--b:#1B1F3A;--c:#E6E9FF"><span></span><b>은하수</b></div>
+      </div>
+      <p class="note">스킨마다 다크·라이트 모드가 따로 있어요. 위 색은 각 스킨의 다크 모드 배경과 요정 색이에요.</p>
+    </section>
+
+    <section class="reveal">
+      <h2>무료와 Pro</h2>
+      <div class="plans">
+        <div class="plan"><h3>무료</h3><ul><li>다리 1개</li><li>모든 동기화 기능</li><li>광고 표시</li></ul></div>
+        <div class="plan pro"><h3>Pro</h3><ul><li>다리 개수 제한 없음</li><li>모든 동기화 기능</li><li>광고 없음</li></ul></div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>알아 두세요</h2>
+      <dl class="specs">
+        <dt>지원 기기</dt><dd>Android 8.0 (API 26) 이상</dd>
+        <dt>필요한 것</dt><dd>Google 계정 (드라이브 접근 권한 동의)</dd>
+        <dt>데이터</dt><dd>파일은 폰과 내 드라이브 사이를 바로 오가요. Yddrasil 서버를 거치지 않아요. <a href="privacy.html#irisa">개인정보처리방침</a></dd>
+      </dl>
+    </section>
+
+    <nav class="app-switch reveal" aria-label="다른 요정">
+      <a href="flit.html"><img src="assets/flit.svg" alt="" width="48" height="48"><span>← Flit</span></a>
+      <a href="wisp.html"><span>Wisp →</span><img src="assets/wisp.svg" alt="" width="48" height="48"></a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.svg" alt="" width="24" height="24">
+    <span>© 2026 Yddrasil Corporation</span>
+    <span class="sep">·</span>
+    <a href="privacy.html">개인정보처리방침</a>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
