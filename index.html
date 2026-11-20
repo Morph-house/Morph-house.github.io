@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yddrasil — 요정이 사는 앱</title>
+  <meta name="description" content="Yddrasil은 Wisp, Flit, Irisa 같은 요정들이 일을 거들어 주는 안드로이드 앱을 만듭니다.">
+  <meta property="og:title" content="Yddrasil">
+  <meta property="og:description" content="세계수 아래, 요정들이 당신의 하루를 거듭니다.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://morph-house.github.io/">
+  <meta property="og:image" content="https://morph-house.github.io/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0B1026">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="brand" href="#top"><img src="assets/logo.svg" alt="" width="32" height="32"><span>Yddrasil</span></a>
+    <nav>
+      <a href="#about">소개</a>
+      <a href="#fairies">요정들</a>
+      <a href="#promise">약속</a>
+      <a href="#contact">연락</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- 첫 화면 -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Yddrasil Corporation</p>
+        <h1>세계수 아래,<br><em>요정</em>들이 당신의 하루를 거듭니다</h1>
+        <p class="lead">Yddrasil은 작은 요정 하나가 한 가지 일을 맡는 안드로이드 앱을 만듭니다.
+          메신저에 답하는 도깨비불, 할 일을 챙기는 물방울, 두 폴더 사이에 다리를 놓는 이리사까지.</p>
+        <div class="cta">
+          <a class="btn primary" href="#fairies">요정 만나기</a>
+          <a class="btn ghost" href="#about">Yddrasil 이야기</a>
+        </div>
+      </div>
+
+      <div class="tree">
+        <img src="assets/tree.jpg" width="1100" height="761" alt="별빛으로 그린 세계수와 가지 사이를 나는 요정들">
+      </div>
+    </section>
+
+    <!-- 회사 소개 -->
+    <section id="about" class="about reveal">
+      <h2>Yddrasil 이야기</h2>
+      <div class="about-grid">
+        <p>옛 이야기 속 세계수는 가지마다 서로 다른 세계를 품고 있었습니다.
+          Yddrasil의 앱도 그렇습니다. 한 그루의 나무에서 뻗은 가지마다 요정이 하나씩 살고,
+          요정마다 맡은 일이 하나씩 있습니다.</p>
+        <p>복잡한 기능을 한데 몰아넣기보다, 한 가지 일을 끝까지 잘하는 작은 앱을 만듭니다.
+          그리고 그 일을 맡은 요정에게 얼굴과 이름을 붙여, 기계가 아니라 곁에 있는 누군가가
+          거들어 주는 느낌을 주고 싶었습니다.</p>
+      </div>
+    </section>
+
+    <!-- 요정(앱) 소개 -->
+    <section id="fairies" class="fairies">
+      <h2 class="reveal">가지마다 사는 요정들</h2>
+      <p class="section-lead reveal">세 요정이 지금 일하고 있습니다. 새 가지는 계속 자라는 중이에요.</p>
+
+      <article id="wisp" class="fairy reveal" style="--accent:#4FD1C5">
+        <img class="fairy-icon" src="assets/wisp.svg" alt="Wisp 아이콘: 청록색 도깨비불 요정" width="128" height="128">
+        <div class="fairy-body">
+          <p class="fairy-kind">도깨비불 요정 · 메신저 자동 응답</p>
+          <h3>Wisp <span>위스프</span></h3>
+          <p>메신저 알림을 받아 자동으로 답장하는 봇 앱입니다. JavaScript로 스크립트를 써서
+            명령어 응답, 공지 전달, 시간 재기 같은 동작을 직접 만들 수 있어요.
+            밤길의 도깨비불처럼, 대화방 한쪽에서 조용히 불을 밝힙니다.</p>
+          <ul class="chips">
+            <li>JavaScript 스크립트 (레거시 · API2)</li>
+            <li>알림 기반 자동 답장</li>
+            <li>재부팅 뒤 자동 컴파일</li>
+            <li>태블릿 세 칸 편집기</li>
+            <li>PC용 Wisp Desktop 편집기</li>
+          </ul>
+          <div class="downloads">
+            <a class="btn primary small" href="https://github.com/Morph-house/Wisp-releases" target="_blank" rel="noopener">APK 내려받기</a>
+            <a class="btn ghost small" href="https://github.com/Morph-house/WispDesktop-Release" target="_blank" rel="noopener">Wisp Desktop (PC)</a>
+          </div>
+        </div>
+      </article>
+
+      <article id="flit" class="fairy reveal" style="--accent:#2ED8E6">
+        <img class="fairy-icon" src="assets/flit.svg" alt="Flit 아이콘: 반투명 날개를 단 물방울 요정" width="128" height="128">
+        <div class="fairy-body">
+          <p class="fairy-kind">물방울 요정 · 할 일과 일정</p>
+          <h3>Flit <span>플릿</span> <em class="badge">제작 중</em></h3>
+          <p>할 일과 일정을 가볍게 적고 잊지 않게 챙겨 주는 앱입니다. "내일 3시 회의"처럼
+            평소 말투로 적으면 날짜와 시간을 알아듣고, 정해진 시간이나 장소에서 살짝 알려 줍니다.
+            물방울처럼 톡, 필요한 순간에 떨어집니다.</p>
+          <ul class="chips">
+            <li>자연어로 빠른 입력</li>
+            <li>반복 일정 · 하위 할 일</li>
+            <li>시간 · 장소 알림</li>
+            <li>오늘 할 일 · 월간 위젯</li>
+            <li>기기 캘린더 연동</li>
+            <li>공유 메뉴 · 빠른 설정 타일</li>
+          </ul>
+          <span class="btn ghost small disabled" aria-disabled="true">곧 만나요 · 제작 중</span>
+        </div>
+      </article>
+
+      <article id="irisa" class="fairy reveal" style="--accent:#B9A7FF">
+        <img class="fairy-icon" src="assets/irisa.svg" alt="Irisa Bridge 아이콘: 나무 아치 다리 위에 앉은 요정 이리사" width="128" height="128">
+        <div class="fairy-body">
+          <p class="fairy-kind">다리 위의 요정 · 구글 드라이브 동기화</p>
+          <h3>Irisa Bridge <span>이리사 브릿지</span></h3>
+          <p>구글 드라이브 폴더와 휴대폰 폴더를 이어 주는 동기화 앱입니다. 요정 이리사가
+            두 기슭 사이에 다리를 놓고 사진, 문서, 영상을 실어 나릅니다. 일이 끝나면
+            다리 위에 내려앉아 쉬어요.</p>
+          <ul class="chips">
+            <li>양방향 · 한 방향 동기화</li>
+            <li>충돌본 보존</li>
+            <li>최근 3번 되돌리기</li>
+            <li>끊긴 업로드 이어 올리기</li>
+            <li>15분 ~ 1시간 백그라운드 동기화</li>
+            <li>스킨 4종</li>
+          </ul>
+          <a class="btn primary small" href="https://github.com/Morph-house/IrisaBridge-releases" target="_blank" rel="noopener">APK 내려받기</a>
+        </div>
+      </article>
+
+      <article class="fairy seed reveal">
+        <div class="seed-icon" aria-hidden="true"><span></span></div>
+        <div class="fairy-body">
+          <p class="fairy-kind">새싹</p>
+          <h3>다음 요정</h3>
+          <p>세계수에는 아직 빈 가지가 많습니다. 다음 요정이 어떤 일을 맡을지는 곧 알려 드릴게요.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- 만드는 방식 -->
+    <section id="promise" class="promise">
+      <h2 class="reveal">요정과 맺는 약속</h2>
+      <div class="cards">
+        <div class="card reveal">
+          <h4>한 요정, 한 가지 일</h4>
+          <p>앱마다 맡은 일을 하나로 좁혀, 열자마자 무엇을 하는 앱인지 알 수 있게 만듭니다.</p>
+        </div>
+        <div class="card reveal">
+          <h4>내 기기 안에서</h4>
+          <p>필요한 권한만 쓰고, 데이터는 가능한 한 사용자의 기기와 계정 안에 둡니다.</p>
+        </div>
+        <div class="card reveal">
+          <h4>몽환적이되 읽기 쉽게</h4>
+          <p>밤하늘처럼 고운 화면을 좋아하지만, 정보는 언제나 또렷하게 보이도록 합니다.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+      <h2>요정에게 쪽지 남기기</h2>
+      <p>버그 제보, 기능 제안, 협업 문의는 GitHub에서 받고 있어요.</p>
+      <a class="btn primary" href="https://github.com/Morph-house" target="_blank" rel="noopener">GitHub 둘러보기</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.svg" alt="" width="24" height="24">
+    <span>© <span id="year">2026</span> Yddrasil Corporation</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

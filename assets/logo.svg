@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Yddrasil">
+  <defs>
+    <linearGradient id="lt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A5F3FC"/><stop offset="1" stop-color="#B9A7FF"/></linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0B1026"/>
+  <!-- 세계수: 줄기에서 갈라지는 Y자 가지와 뿌리 -->
+  <g fill="none" stroke="url(#lt)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M32,50 L32,30"/>
+    <path d="M32,32 C30,24 24,20 17,18"/>
+    <path d="M32,32 C34,24 40,20 47,18"/>
+    <path d="M32,26 L32,14"/>
+    <path d="M32,50 C28,52 24,52 20,54 M32,50 C36,52 40,52 44,54"/>
+  </g>
+  <!-- 가지 끝의 세 요정 빛 -->
+  <circle cx="17" cy="18" r="3.4" fill="#4FD1C5"/>
+  <circle cx="32" cy="13" r="3.4" fill="#2ED8E6"/>
+  <circle cx="47" cy="18" r="3.4" fill="#B9A7FF"/>
+</svg>

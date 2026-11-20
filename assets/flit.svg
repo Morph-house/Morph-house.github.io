@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="Flit">
+  <defs>
+    <radialGradient id="fglow" cx="54" cy="60" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2ED8E6" stop-opacity=".33"/><stop offset="1" stop-color="#2ED8E6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fbody" x1="54" y1="33" x2="54" y2="74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B6F7FA"/><stop offset="1" stop-color="#18A8CC"/></linearGradient>
+  </defs>
+  <rect width="108" height="108" rx="24" fill="#13284A"/>
+  <circle cx="54" cy="60" r="22" fill="url(#fglow)"/>
+  <g stroke="#3FB8D0" stroke-linejoin="round">
+    <path d="M52,50 C40,30 22,32 24,48 C26,58 42,60 52,54 Z" fill="#A8F0F4" fill-opacity=".55" stroke-width="1.4"/>
+    <path d="M56,50 C68,30 86,32 84,48 C82,58 66,60 56,54 Z" fill="#A8F0F4" fill-opacity=".55" stroke-width="1.4"/>
+    <path d="M51,57 C42,58 36,66 40,71 C45,74 51,67 51,57 Z" fill="#8FE6EE" fill-opacity=".45" stroke-width="1.2"/>
+    <path d="M57,57 C66,58 72,66 68,71 C63,74 57,67 57,57 Z" fill="#8FE6EE" fill-opacity=".45" stroke-width="1.2"/>
+  </g>
+  <path fill="url(#fbody)" d="M54,33 C58,41 67,49 67,60 C67,68 61,74 54,74 C47,74 41,68 41,60 C41,49 50,41 54,33 Z"/>
+  <ellipse cx="49.5" cy="58" rx="1.4" ry="2" fill="#0B2A3F"/><ellipse cx="58.5" cy="58" rx="1.4" ry="2" fill="#0B2A3F"/>
+  <path d="M51.5,63.5 Q54,66 56.5,63.5" fill="none" stroke="#0B2A3F" stroke-width="1.2" stroke-linecap="round"/>
+  <ellipse cx="48.5" cy="50" rx="1.6" ry="3.2" fill="#fff" fill-opacity=".7"/>
+  <circle cx="29" cy="42" r="1.6" fill="#F5C86B"/><circle cx="79" cy="38" r="1.2" fill="#F5C86B"/><circle cx="76" cy="79" r="1" fill="#F5C86B"/>
+</svg>
