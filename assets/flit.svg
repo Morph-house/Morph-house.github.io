@@ -1,19 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="Flit">
   <defs>
-    <radialGradient id="fglow" cx="54" cy="60" r="22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2ED8E6" stop-opacity=".33"/><stop offset="1" stop-color="#2ED8E6" stop-opacity="0"/></radialGradient>
-    <linearGradient id="fbody" x1="54" y1="33" x2="54" y2="74" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B6F7FA"/><stop offset="1" stop-color="#18A8CC"/></linearGradient>
+    <radialGradient id="fglow" cx="54" cy="58" r="26" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2ED8E6" stop-opacity=".27"/><stop offset="1" stop-color="#2ED8E6" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fbody" x1="50" y1="44" x2="58" y2="72" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#D2FBFC"/><stop offset="1" stop-color="#1AA6CC"/></linearGradient>
   </defs>
   <rect width="108" height="108" rx="24" fill="#13284A"/>
-  <circle cx="54" cy="60" r="22" fill="url(#fglow)"/>
-  <g stroke="#3FB8D0" stroke-linejoin="round">
-    <path d="M52,50 C40,30 22,32 24,48 C26,58 42,60 52,54 Z" fill="#A8F0F4" fill-opacity=".55" stroke-width="1.4"/>
-    <path d="M56,50 C68,30 86,32 84,48 C82,58 66,60 56,54 Z" fill="#A8F0F4" fill-opacity=".55" stroke-width="1.4"/>
-    <path d="M51,57 C42,58 36,66 40,71 C45,74 51,67 51,57 Z" fill="#8FE6EE" fill-opacity=".45" stroke-width="1.2"/>
-    <path d="M57,57 C66,58 72,66 68,71 C63,74 57,67 57,57 Z" fill="#8FE6EE" fill-opacity=".45" stroke-width="1.2"/>
+  <circle cx="54" cy="58" r="26" fill="url(#fglow)"/>
+  <g stroke="#6FD3E2" stroke-linejoin="round">
+    <path d="M50,53 C44,44 36,36 29,35 C26,35 25,38 27,41 C31,48 41,53 50,55 Z" fill="#C8F6F8" fill-opacity=".5" stroke-width="1.1"/>
+    <path d="M58,53 C64,44 72,36 79,35 C82,35 83,38 81,41 C77,48 67,53 58,55 Z" fill="#C8F6F8" fill-opacity=".5" stroke-width="1.1"/>
+    <path d="M50,59 C44,60 39,63 38,67 C38,69 40,70 42,69 C46,67 49,63 50,60 Z" fill="#B4EEF3" fill-opacity=".42" stroke-width="1"/>
+    <path d="M58,59 C64,60 69,63 70,67 C70,69 68,70 66,69 C62,67 59,63 58,60 Z" fill="#B4EEF3" fill-opacity=".42" stroke-width="1"/>
   </g>
-  <path fill="url(#fbody)" d="M54,33 C58,41 67,49 67,60 C67,68 61,74 54,74 C47,74 41,68 41,60 C41,49 50,41 54,33 Z"/>
-  <ellipse cx="49.5" cy="58" rx="1.4" ry="2" fill="#0B2A3F"/><ellipse cx="58.5" cy="58" rx="1.4" ry="2" fill="#0B2A3F"/>
-  <path d="M51.5,63.5 Q54,66 56.5,63.5" fill="none" stroke="#0B2A3F" stroke-width="1.2" stroke-linecap="round"/>
-  <ellipse cx="48.5" cy="50" rx="1.6" ry="3.2" fill="#fff" fill-opacity=".7"/>
-  <circle cx="29" cy="42" r="1.6" fill="#F5C86B"/><circle cx="79" cy="38" r="1.2" fill="#F5C86B"/><circle cx="76" cy="79" r="1" fill="#F5C86B"/>
+  <path fill="url(#fbody)" d="M54,42 C57,48 65,55 65,62 C65,68 60,72 54,72 C48,72 43,68 43,62 C43,55 51,48 54,42 Z"/>
+  <path d="M47.8,61 Q47.6,55.5 51.2,51.5" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="59.5" cy="66.5" r="1" fill="#fff" fill-opacity=".45"/>
+  <path d="M72,24 Q72.7,29.3 78,30 Q72.7,30.7 72,36 Q71.3,30.7 66,30 Q71.3,29.3 72,24 Z" fill="#F5C86B"/>
+  <circle cx="35" cy="75" r="1.4" fill="#F5C86B" fill-opacity=".85"/>
+  <circle cx="29.5" cy="69.5" r=".9" fill="#F5C86B" fill-opacity=".6"/>
+  <circle cx="41.5" cy="79" r=".8" fill="#F5C86B" fill-opacity=".5"/>
 </svg>
