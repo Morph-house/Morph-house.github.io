@@ -3,7 +3,7 @@
   const canvas = document.getElementById("sky");
   const ctx = canvas.getContext("2d");
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const colors = ["#4FD1C5", "#2ED8E6", "#B9A7FF", "#FDE68A"];
+  const colors = ["#4FD1C5", "#7FA8FF", "#B9A7FF", "#FDE68A"];
   let w, h, stars, motes;
 
   function resize() {
