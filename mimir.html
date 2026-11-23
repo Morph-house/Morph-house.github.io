@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mimir — Yddrasil</title>
+  <meta name="description" content="Mimir: 폰 안에서 작은 AI 모델로 리플(봇)과 대화하는 앱 (v0.1.0 미리보기)">
+  <meta property="og:title" content="Mimir — 샘물 곁에서 깨어나는 요정">
+  <meta property="og:description" content="폰 안에서 작은 AI 모델로 리플과 대화하는 앱. 대화는 폰 밖으로 나가지 않아요.">
+  <meta property="og:image" content="https://morph-house-github-io.pages.dev/assets/og.jpg">
+  <meta name="theme-color" content="#0B1026">
+  <link rel="icon" href="assets/mimir.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="app-page" style="--accent:#F5B88A">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <header class="nav">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="32" height="32"><span>Yddrasil</span></a>
+    <nav>
+      <a href="wisp.html">Wisp</a>
+      <a href="flit.html">Flit</a>
+      <a href="irisa.html">Irisa</a>
+      <a href="mimir.html" aria-current="page">Mimir</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="app-hero">
+      <img class="app-hero-icon" src="assets/mimir.svg" alt="Mimir 아이콘" width="180" height="180">
+      <div>
+        <p class="fairy-kind">샘물 곁의 요정 · 온디바이스 AI 대화</p>
+        <h1>Mimir <span>미미르</span> <em class="badge" data-release="Morph-house/Mimir-releases" data-prefix="v">v0.1.0</em></h1>
+        <p class="lead">폰 안에서 작은 AI 모델을 돌려, 직접 깨운 리플(봇)들과 대화하게 해 주는 앱이에요.
+          대화는 폰 밖으로 나가지 않아요. 인터넷은 샘물(모델) 받기와 광고에만 써요.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/Morph-house/Mimir-releases/releases/download/v0.1.0/Mimir-v0.1.0.apk" data-apk="Morph-house/Mimir-releases" rel="noopener">APK 내려받기</a>
+          <a class="btn ghost" href="https://github.com/Morph-house/Mimir-releases/releases/latest" target="_blank" rel="noopener">릴리즈 노트</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>샘물 곁에서 리플을 깨워요</h2>
+      <p class="section-lead">이름과 성품, 말씨, 첫인사를 정해 리플을 만들고, 그 리플과 바로 이야기해요.</p>
+      <div class="feature-grid">
+        <div class="feature"><h3>샘에서 깨우기</h3><p>이름·성품·말씨·첫인사를 정해 리플을 만들어요. 샘플 문구로 바로 시작할 수도 있어요.</p></div>
+        <div class="feature"><h3>샘물 받기</h3><p>추천 모델(Kanana 1.5 2.1B, 약 1.4GB)을 앱 안에서 받아요. 폰 메모리에 맞는지도 알려 줘요.</p></div>
+        <div class="feature"><h3>물가에서 대화</h3><p>리플과 시험 대화를 해요. 대답이 글자 단위로 차올라요.</p></div>
+        <div class="feature"><h3>다른 앱에서 부르기</h3><p>Wisp 같은 요정 앱이나 다른 앱이 리플을 불러 대화할 수 있어요. 처음 보는 앱은 허락할지 먼저 물어봐요.</p></div>
+        <div class="feature"><h3>샘 깨워 두기</h3><p>미미르가 화면 뒤에 있어도 다른 앱의 부름에 대답해요.</p></div>
+      </div>
+      <p class="note">미리보기 버전이라 기억의 책(md 지식) 등 일부 기능은 아직 없어요.</p>
+    </section>
+
+    <section class="reveal">
+      <h2>알아 두세요</h2>
+      <dl class="specs">
+        <dt>상태</dt><dd>첫 공개 미리보기 (v0.1.0)</dd>
+        <dt>지원 기기</dt><dd>Android 8.0 (API 26) 이상, 64비트(arm64) 폰</dd>
+        <dt>권장 메모리</dt><dd>6GB 이상</dd>
+        <dt>첫 대답</dt><dd>모델을 불러오느라 몇 초에서 수십 초 걸릴 수 있어요.</dd>
+      </dl>
+    </section>
+
+    <nav class="app-switch reveal" aria-label="다른 요정">
+      <a href="irisa.html"><img src="assets/irisa.svg" alt="" width="48" height="48"><span>← Irisa Bridge</span></a>
+      <a href="wisp.html"><span>Wisp →</span><img src="assets/wisp.svg" alt="" width="48" height="48"></a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.svg" alt="" width="24" height="24">
+    <span>© 2026 Yddrasil Corporation</span>
+    <span class="sep">·</span>
+    <a href="privacy.html">개인정보처리방침</a>
+  </footer>
+  <script src="script.js"></script>
+  <script src="version.js"></script>
+</body>
+</html>
