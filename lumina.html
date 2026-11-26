@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumina Archive — Yddrasil</title>
+  <meta name="description" content="Lumina Archive: 달의 요정 루미나가 지키는 파일 관리자 겸 뷰어 (v0.1.0 미리보기)">
+  <meta property="og:title" content="Lumina Archive — 달빛 서고의 요정">
+  <meta property="og:description" content="파일을 정리하고 텍스트·코드·PDF를 바로 읽는 파일 관리자. 파일은 폰 밖으로 나가지 않아요.">
+  <meta property="og:image" content="https://morph-house-github-io.pages.dev/assets/og.jpg">
+  <meta name="theme-color" content="#0B1026">
+  <link rel="icon" href="assets/lumina.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body class="app-page" style="--accent:#C9D6FF">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <header class="nav">
+    <a class="brand" href="./"><img src="assets/logo.svg" alt="" width="32" height="32"><span>Yddrasil</span></a>
+    <nav>
+      <a href="wisp.html">Wisp</a>
+      <a href="flit.html">Flit</a>
+      <a href="irisa.html">Irisa</a>
+      <a href="mimir.html">Mimir</a>
+      <a href="lumina.html" aria-current="page">Lumina</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="app-hero">
+      <img class="app-hero-icon" src="assets/lumina.svg" alt="Lumina Archive 아이콘" width="180" height="180">
+      <div>
+        <p class="fairy-kind">달의 요정 · 파일 관리자</p>
+        <h1>Lumina Archive <span>루미나 아카이브</span> <em class="badge" data-release="Morph-house/LuminaArchive-releases" data-prefix="v">v0.1.0</em></h1>
+        <p class="lead">달빛이 스며드는 서고에서 요정 루미나가 파일을 지키고 정리해 주는 파일 관리자 겸 뷰어예요.
+          파일과 파일 정보는 폰 밖으로 나가지 않아요. 인터넷은 광고에만 써요.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://github.com/Morph-house/LuminaArchive-releases/releases/download/v0.1.0/LuminaArchive-v0.1.0.apk" data-apk="Morph-house/LuminaArchive-releases" rel="noopener">APK 내려받기</a>
+          <a class="btn ghost" href="https://github.com/Morph-house/LuminaArchive-releases/releases/latest" target="_blank" rel="noopener">릴리즈 노트</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="reveal">
+      <h2>달빛 서고를 둘러봐요</h2>
+      <p class="section-lead">폴더는 서가, 파일은 서가에 꽂힌 기록이에요. 루미나가 정리하고, 열람실에서 바로 펼쳐 읽어요.</p>
+      <div class="feature-grid">
+        <div class="feature"><h3>서가 둘러보기</h3><p>내장 저장소와 SD 카드의 모든 폴더를 목록·격자로 보고, 이름·크기·날짜·종류로 정렬해요.</p></div>
+        <div class="feature"><h3>파일 작업</h3><p>복사·이동·이름 바꾸기·삭제·공유. 이름이 겹치면 건너뛰기·덮어쓰기·둘 다 두기를 골라요. 긴 작업은 앱을 닫아도 알림에서 이어져요.</p></div>
+        <div class="feature"><h3>달 그림자 (휴지통)</h3><p>지운 파일은 정해 둔 기간(7·30·90일) 동안 보관했다가 되살릴 수 있어요.</p></div>
+        <div class="feature"><h3>달의 서고 (홈)</h3><p>저장 공간을 달의 위상으로 보여 주고, 카테고리·별자리(즐겨찾기)·최근 파일을 모아 봐요.</p></div>
+        <div class="feature"><h3>등불 검색</h3><p>저장소 전체에서 파일 이름을 찾아요. 종류·크기·날짜로 거를 수 있어요.</p></div>
+        <div class="feature"><h3>달빛 열람실</h3><p>텍스트(큰 로그·한글 인코딩 자동 감지), JSON 트리, 코드 강조, Markdown, 이미지, PDF, ZIP 안 보기. 다른 앱에서 "Lumina로 열기"도 돼요.</p></div>
+        <div class="feature"><h3>압축</h3><p>ZIP 만들기·풀기. 한글 파일 이름 ZIP도 깨지지 않아요.</p></div>
+        <div class="feature"><h3>달 뒤편의 서고</h3><p>패턴·지문으로 잠그는 AES-256 암호화 보관함. 복구 코드로 다시 열 수 있어요.</p></div>
+      </div>
+      <p class="note">미리보기 버전이라 요정 마을(다른 요정 앱과의 연계)은 아직 없어요.</p>
+    </section>
+
+    <section class="reveal">
+      <h2>알아 두세요</h2>
+      <dl class="specs">
+        <dt>상태</dt><dd>첫 공개 미리보기 (<span data-release="Morph-house/LuminaArchive-releases" data-prefix="v">v0.1.0</span>)</dd>
+        <dt>지원 기기</dt><dd>Android 8.0 (API 26) 이상</dd>
+        <dt>권한</dt><dd>파일 관리자라서 "모든 파일 액세스"를 요청해요. 거부하면 고른 폴더만 쓰는 제한 모드로 동작해요.</dd>
+        <dt>광고</dt><dd>GitHub 배포판에는 홈 화면에 광고가 하나 있어요. 광고 제거는 Play 스토어 판에서만 살 수 있어요.</dd>
+        <dt>복구 코드</dt><dd>비밀 서고의 복구 코드는 꼭 따로 보관해 주세요. 잃어버리면 아무도 파일을 되살릴 수 없어요.</dd>
+        <dt>데이터</dt><dd>파일과 설정은 모두 기기 안에 있어요. <a href="privacy.html#lumina">개인정보처리방침</a></dd>
+      </dl>
+    </section>
+
+    <nav class="app-switch reveal" aria-label="다른 요정">
+      <a href="mimir.html"><img src="assets/mimir.svg" alt="" width="48" height="48"><span>← Mimir</span></a>
+      <a href="wisp.html"><span>Wisp →</span><img src="assets/wisp.svg" alt="" width="48" height="48"></a>
+    </nav>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/logo.svg" alt="" width="24" height="24">
+    <span>© 2026 Yddrasil Corporation</span>
+    <span class="sep">·</span>
+    <a href="privacy.html">개인정보처리방침</a>
+  </footer>
+  <script src="script.js"></script>
+  <script src="version.js"></script>
+</body>
+</html>
